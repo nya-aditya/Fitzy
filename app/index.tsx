@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { Link } from 'expo-router';
 
 export default function IndexScreen() {
   return (
@@ -26,6 +27,13 @@ export default function IndexScreen() {
 
         {/* Supporting Tagline */}
         <Text style={styles.supportingTagline}>Track. Train. Eat. Improve.</Text>
+
+        {/* Enter App Navigation CTA */}
+        <Link href="/(tabs)" asChild>
+          <Pressable style={styles.enterButton}>
+            <Text style={styles.enterButtonText}>ENTER FITZY</Text>
+          </Pressable>
+        </Link>
       </View>
     </SafeAreaView>
   );
@@ -114,6 +122,21 @@ const styles = StyleSheet.create({
     letterSpacing: 1.5,
     color: '#64748B',
     textAlign: 'center',
+  },
+  enterButton: {
+    marginTop: 40,
+    paddingVertical: 12,
+    paddingHorizontal: 28,
+    borderRadius: 20,
+    backgroundColor: '#0C0E14',
+    borderWidth: 1,
+    borderColor: '#181E2B',
+  },
+  enterButtonText: {
+    fontSize: 12,
+    fontWeight: '700',
+    letterSpacing: 2,
+    color: '#10B981',
   },
 });
 
