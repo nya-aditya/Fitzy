@@ -1,13 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import HomeHeader from '../../components/home/HomeHeader';
 
 export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>HOME</Text>
-        <Text style={styles.subtitle}>Fitzy Overview</Text>
+        <HomeHeader name="Aditya" />
       </View>
     </SafeAreaView>
   );
@@ -20,21 +20,6 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingHorizontal: 24,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: '700',
-    letterSpacing: 2,
-    color: '#FFFFFF',
-    marginBottom: 8,
-  },
-  subtitle: {
-    fontSize: 14,
-    fontWeight: '500',
-    color: '#64748B',
-    letterSpacing: 0.5,
   },
 });
+
